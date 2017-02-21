@@ -39,6 +39,11 @@ int write_block(u_int16_t blk_index, char *buff)
 }
 EXPORT_SYMBOL_GPL(write_block);
 
+int check_fs(const char* filename)
+{
+	return 0;
+}
+EXPORT_SYMBOL_GPL(check_fs);
 
 /*
  * Initialize/cleanup actions

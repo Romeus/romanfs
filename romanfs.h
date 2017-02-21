@@ -24,3 +24,4 @@ int create_fs(const char* filename, u_int16_t number_of_blocks);
 int umount_fs(const char* filename);
 int read_block(u_int16_t blk_index, const char *buff);
 int write_block(u_int16_t blk_index, char *buff);
+int check_fs(const char* filename);
