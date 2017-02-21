@@ -13,35 +13,30 @@ int mount_fs(const char* filename)
 {
 	return 0;
 }
+EXPORT_SYMBOL_GPL(mount_fs);
 
 int create_fs(const char* filename, u_int16_t number_of_blocks)
 {
 	return 0;
 }
+EXPORT_SYMBOL_GPL(create_fs);
 
 int umount_fs(const char* filename)
 {
 	return 0;
 }
+EXPORT_SYMBOL_GPL(umount_fs);
 
 int read_block(u_int16_t blk_index, const char *buff)
 {
 	return 0;
 }
+EXPORT_SYMBOL_GPL(read_block);
 
 int write_block(u_int16_t blk_index, char *buff)
 {
 	return 0;
 }
-
-
-/*
- * Export module's public interface
- */
-EXPORT_SYMBOL_GPL(mount_fs);
-EXPORT_SYMBOL_GPL(create_fs);
-EXPORT_SYMBOL_GPL(umount_fs);
-EXPORT_SYMBOL_GPL(read_block);
 EXPORT_SYMBOL_GPL(write_block);
 
 
