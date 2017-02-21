@@ -1,10 +1,13 @@
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/init.h>
+#include <linux/syscalls.h>
+#include <linux/fcntl.h>
+#include <asm/uaccess.h>
 #include "romanfs.h"
 
 /*
- * Module's body
+ * Module's external functions bodies
  */
 int mount_fs(const char* filename)
 {
@@ -21,15 +24,16 @@ int umount_fs(const char* filename)
 	return 0;
 }
 
-int read_block(u_int16_t blk_index, const char __user *buff)
+int read_block(u_int16_t blk_index, const char *buff)
 {
 	return 0;
 }
 
-int write_block(u_int16_t blk_index, char __user *buff)
+int write_block(u_int16_t blk_index, char *buff)
 {
 	return 0;
 }
+
 
 /*
  * Export module's public interface
@@ -39,6 +43,7 @@ EXPORT_SYMBOL_GPL(create_fs);
 EXPORT_SYMBOL_GPL(umount_fs);
 EXPORT_SYMBOL_GPL(read_block);
 EXPORT_SYMBOL_GPL(write_block);
+
 
 /*
  * Initialize/cleanup actions
